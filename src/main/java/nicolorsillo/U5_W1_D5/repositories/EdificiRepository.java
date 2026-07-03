@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface EdificiDAO extends JpaRepository<Edificio, UUID> {
+public interface EdificiRepository extends JpaRepository<Edificio, UUID> {
+
+    boolean existsByNomeAndIndirizzoAndCitta(String nome, String indirizzo, String citta);
 }
